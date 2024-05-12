@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Stack, useRouter } from "expo-router";
+import { Stack, router, useRouter } from "expo-router";
 import { Password } from "phosphor-react-native";
 import * as React from "react";
 import { useForm } from "react-hook-form";
@@ -18,6 +18,7 @@ import {
     FormSwitch,
     FormTextarea,
 } from "~/components/ui/form";
+import { Separator } from "~/components/ui/separator";
 
 import { Text } from "~/components/ui/text";
 
@@ -28,7 +29,7 @@ const formSchema = z.object({
     password: z.string()
 });
 
-export default function UserAuthForm() {
+export default function UserAuthForm(props: { className?: string }) {
     const insets = useSafeAreaInsets();
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -50,16 +51,17 @@ export default function UserAuthForm() {
     }
 
     return (
-        <View>
+        <View {...props}>
             <Form {...form}>
-                <View className="grid gap-4">
-                    <View className="grid gap-2">
+                <View className="grid gap-5">
+                    <View className="grid gap-5">
                         <FormField
                             control={form.control}
                             name="email"
                             render={({ field }) => (
                                 <FormInput
-                                    label="Name"
+                                    className="w-full bg-gray-100 border-none rounded-lg px-4 py-2"
+                                    label="Email"
                                     placeholder="Enter your email"
                                     autoCapitalize="none"
                                     {...field}
@@ -67,13 +69,15 @@ export default function UserAuthForm() {
                             )}
                         />
                     </View>
-                    <View className="grid gap-2">
+                    <View className="grid gap-5">
 
                         <FormField
+
                             control={form.control}
                             name="password"
                             render={({ field }) => (
                                 <FormInput
+                                    className="w-full bg-gray-100 border-none rounded-lg px-4 py-2"
                                     label="Password"
                                     placeholder="Enter your password"
                                     secureTextEntry
@@ -83,14 +87,17 @@ export default function UserAuthForm() {
 
                         />
                         <View className="flex items-center">
-                            <Text className="ml-auto inline-block text-sm underline text-">
+                            <Text className="ml-auto inline-block text-sm underline text-gray-500">
                                 Forgot password?
                             </Text>
                         </View>
                     </View>
-                    <Button onPress={form.handleSubmit(onSubmit)}>
-                        <Text>Login</Text>
+
+                    <Button className="bg-blue-700 rounded-lg my-8" onPress={form.handleSubmit(onSubmit)}>
+                        <Text>Sign In</Text>
                     </Button>
+
+                    
 
                 </View>
             </Form>

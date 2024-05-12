@@ -1,5 +1,6 @@
 
 import { Stack } from "expo-router";
+import FeedHeader from "~/components/common/FeedHeader";
 
 export default function Layout() {
 

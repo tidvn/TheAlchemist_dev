@@ -6,6 +6,7 @@ import { StatusBar } from "expo-status-bar";
 import * as React from "react";
 import { Platform } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { ThemeToggle } from "~/components/common/ThemeToggle";
 import { PortalHost } from "~/components/primitives/portal";
 import { setAndroidNavigationBar } from "~/lib/android-navigation-bar";
@@ -70,22 +71,20 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
-      <StatusBar style={isDarkColorScheme ? "light" : "dark"} />
-      <GestureHandlerRootView style={{ flex: 1 }}>
-        <BottomSheetModalProvider>
-          <Stack >
-            <Stack.Screen
-              name="index"
-              options={{
-                header: () => <ThemeToggle />,
-              }}
-            />
-
-          </Stack>
-        </BottomSheetModalProvider>
-      </GestureHandlerRootView>
-      <PortalHost />
-    </ThemeProvider>
+    <SafeAreaProvider>
+      <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
+        <StatusBar style={isDarkColorScheme ? "light" : "dark"} />
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <BottomSheetModalProvider>
+            <Stack>
+              <Stack.Screen name="index" options={{ headerShown: false, headerRight: () => <ThemeToggle /> }} />
+              <Stack.Screen name="auth" options={{ headerShown: false }} />
+              <Stack.Screen name="+not-found" />
+            </Stack>
+          </BottomSheetModalProvider>
+        </GestureHandlerRootView>
+        <PortalHost />
+      </ThemeProvider>
+    </SafeAreaProvider>
   );
 }

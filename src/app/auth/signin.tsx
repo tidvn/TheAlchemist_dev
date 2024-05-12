@@ -28,7 +28,7 @@ export default function SignInScreen() {
 
                 <View className="flex items-center mt-4">
                     <Text className="text-gray-500">
-                        Continue with  another account
+                        Continue with another account
                     </Text>
                     <View className="flex-row gap-4 mt-4">
                         <Card className="w-20 h-20 rounded-full ">

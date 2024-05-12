@@ -6,7 +6,7 @@ import Animated, {
   useDerivedValue,
   withTiming,
 } from 'react-native-reanimated';
-import * as SwitchPrimitives from '~/src/components/primitives/switch';
+import * as SwitchPrimitives from '~/components/primitives/switch';
 import { useColorScheme } from '~/lib/useColorScheme';
 
 import { cn } from '~/lib/utils';

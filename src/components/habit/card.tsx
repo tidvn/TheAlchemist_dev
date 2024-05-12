@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, } from 'react-native';
-import { Button } from '~/src/components/ui/button';
+import { Button } from '~/components/ui/button';
 import {
   Card,
   CardContent,
@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '~/src/components/ui/card';
-import { Progress } from '~/src/components/ui/progress';
-import { Text } from '~/src/components/ui/text';
+} from '~/components/ui/card';
+import { Progress } from '~/components/ui/progress';
+import { Text } from '~/components/ui/text';
 import { Tooltip, TooltipContent, TooltipTrigger } from '~/components/ui/tooltip';
 import { Habit } from './storage';
 

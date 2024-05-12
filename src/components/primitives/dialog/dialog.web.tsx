@@ -1,6 +1,6 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import { useAugmentedRef, useControllableState } from '../hooks';
-import * as Slot from '~/src/components/primitives/slot';
+import * as Slot from '~/components/primitives/slot';
 import type {
   PressableRef,
   SlottablePressableProps,
@@ -8,7 +8,7 @@ import type {
   SlottableViewProps,
   TextRef,
   ViewRef,
-} from '~/src/components/primitives/types';
+} from '~/components/primitives/types';
 import * as React from 'react';
 import { Pressable, Text, View, type GestureResponderEvent } from 'react-native';
 import type {

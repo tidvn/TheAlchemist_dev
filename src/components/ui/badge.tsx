@@ -1,9 +1,9 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 import { View } from 'react-native';
-import * as Slot from '~/src/components/primitives/slot';
-import type { SlottableViewProps } from '~/src/components/primitives/types';
+import * as Slot from '~/components/primitives/slot';
+import type { SlottableViewProps } from '~/components/primitives/types';
 import { cn } from '~/lib/utils';
-import { TextClassContext } from '~/src/components/ui/text';
+import { TextClassContext } from '~/components/ui/text';
 
 const badgeVariants = cva(
   'web:inline-flex items-center rounded-full border border-border px-2.5 py-0.5 web:transition-colors web:focus:outline-none web:focus:ring-2 web:focus:ring-ring web:focus:ring-offset-2',

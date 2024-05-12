@@ -6,8 +6,8 @@ import {
   Image as RNImage,
   View,
 } from 'react-native';
-import * as Slot from '~/src/components/primitives/slot';
-import { ComponentPropsWithAsChild, SlottableViewProps, ViewRef } from '~/src/components/primitives/types';
+import * as Slot from '~/components/primitives/slot';
+import { ComponentPropsWithAsChild, SlottableViewProps, ViewRef } from '~/components/primitives/types';
 import { AvatarImageProps, AvatarRootProps } from './types';
 
 type AvatarState = 'loading' | 'error' | 'loaded';

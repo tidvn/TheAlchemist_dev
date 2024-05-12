@@ -2,8 +2,8 @@ import { useScrollToTop } from "@react-navigation/native";
 import { Stack, useRouter } from "expo-router";
 import * as React from "react";
 import { FlatList, View } from "react-native";
-import { Badge } from "~/src/components/ui/badge";
-import { Button } from "~/src/components/ui/button";
+import { Badge } from "~/components/ui/badge";
+import { Button } from "~/components/ui/button";
 import {
   Card,
   CardContent,
@@ -11,9 +11,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "~/src/components/ui/card";
-import { Progress } from "~/src/components/ui/progress";
-import { Text } from "~/src/components/ui/text";
+} from "~/components/ui/card";
+import { Progress } from "~/components/ui/progress";
+import { Text } from "~/components/ui/text";
 import { Habit, deleteHabit, getHabits } from "~/lib/storage";
 
 type HabitProps = {

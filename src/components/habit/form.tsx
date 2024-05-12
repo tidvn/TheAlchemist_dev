@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, TextInput } from 'react-native';
-import { Button } from '~/src/components/ui/button';
+import { Button } from '~/components/ui/button';
 import { Habit } from './storage';
 
 

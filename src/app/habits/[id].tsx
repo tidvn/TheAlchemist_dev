@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { Alert, ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import * as z from "zod";
-import { Button } from "~/src/components/ui/button";
+import { Button } from "~/components/ui/button";
 import {
   Form,
   FormCheckbox,
@@ -16,17 +16,17 @@ import {
   FormSelect,
   FormSwitch,
   FormTextarea,
-} from "~/src/components/ui/form";
-import { Label } from "~/src/components/ui/label";
-import { RadioGroupItem } from "~/src/components/ui/radio-group";
+} from "~/components/ui/form";
+import { Label } from "~/components/ui/label";
+import { RadioGroupItem } from "~/components/ui/radio-group";
 import {
   SelectContent,
   SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "~/src/components/ui/select";
-import { Text } from "~/src/components/ui/text";
+} from "~/components/ui/select";
+import { Text } from "~/components/ui/text";
 import { getHabits, setHabits } from "~/lib/storage";
 import { cn } from "~/lib/utils";
 

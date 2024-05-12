@@ -16,7 +16,7 @@ import type {
   import * as React from 'react';
   import { GestureResponderEvent, Keyboard, Pressable, View, ViewStyle } from 'react-native';
   import { useSafeAreaInsets } from 'react-native-safe-area-context';
-  import { X } from '../Icons';
+  import { X } from '../common/Icons';
   import { Button } from './button';
   import * as Slot from '../primitives/slot';
   import { useColorScheme } from '../../lib/useColorScheme';

@@ -52,35 +52,46 @@ export default function UserAuthForm() {
     return (
         <View>
             <Form {...form}>
-                <View className="gap-7">
-                    <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                            <FormInput
-                                label="Name"
-                                placeholder="Enter your email"
-                                autoCapitalize="none"
-                                {...field}
-                            />
-                        )}
-                    />
-                    <FormField
-                        control={form.control}
-                        name="password"
-                        render={({ field }) => (
-                            <FormInput
-                                label="Password"
-                                placeholder="Enter your password"
-                                secureTextEntry
-                                {...field}
-                            />
-                        )}
+                <View className="grid gap-4">
+                    <View className="grid gap-2">
+                        <FormField
+                            control={form.control}
+                            name="email"
+                            render={({ field }) => (
+                                <FormInput
+                                    label="Name"
+                                    placeholder="Enter your email"
+                                    autoCapitalize="none"
+                                    {...field}
+                                />
+                            )}
+                        />
+                    </View>
+                    <View className="grid gap-2">
 
-                    />
+                        <FormField
+                            control={form.control}
+                            name="password"
+                            render={({ field }) => (
+                                <FormInput
+                                    label="Password"
+                                    placeholder="Enter your password"
+                                    secureTextEntry
+                                    {...field}
+                                />
+                            )}
+
+                        />
+                        <View className="flex items-center">
+                            <Text className="ml-auto inline-block text-sm underline text-">
+                                Forgot password?
+                            </Text>
+                        </View>
+                    </View>
                     <Button onPress={form.handleSubmit(onSubmit)}>
-                        <Text>Submit</Text>
+                        <Text>Login</Text>
                     </Button>
+
                 </View>
             </Form>
         </View>

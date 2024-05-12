@@ -1,4 +1,4 @@
-import { Check } from '~/components/Icons';
+import { Check } from '~/components/common/Icons';
 import * as React from 'react';
 import * as CheckboxPrimitive from '~/components/primitives/checkbox';
 

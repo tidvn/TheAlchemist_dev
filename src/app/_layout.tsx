@@ -6,7 +6,7 @@ import { StatusBar } from "expo-status-bar";
 import * as React from "react";
 import { Platform } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { ThemeToggle } from "~/components/ThemeToggle";
+import { ThemeToggle } from "~/components/common/ThemeToggle";
 import { PortalHost } from "~/components/primitives/portal";
 import { setAndroidNavigationBar } from "~/lib/android-navigation-bar";
 import { NAV_THEME } from "~/lib/constants";
@@ -78,11 +78,11 @@ export default function RootLayout() {
             <Stack.Screen
               name="index"
               options={{
-                headerShown: false,
+                header: () => <ThemeToggle />,
               }}
             />
-            
-            </Stack>
+
+          </Stack>
         </BottomSheetModalProvider>
       </GestureHandlerRootView>
       <PortalHost />

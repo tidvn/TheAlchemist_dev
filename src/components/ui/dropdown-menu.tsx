@@ -1,4 +1,4 @@
-import { Check, ChevronDown, ChevronRight, ChevronUp } from '~/components/Icons';
+import { Check, ChevronDown, ChevronRight, ChevronUp } from '~/components/common/Icons';
 import * as React from 'react';
 import { Platform, StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
 import { TextClassContext } from '~/components/ui/text';

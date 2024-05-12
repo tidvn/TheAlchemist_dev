@@ -74,14 +74,15 @@ export default function RootLayout() {
       <StatusBar style={isDarkColorScheme ? "light" : "dark"} />
       <GestureHandlerRootView style={{ flex: 1 }}>
         <BottomSheetModalProvider>
-          <Stack>
+          <Stack >
             <Stack.Screen
               name="index"
+              options={{
+                headerShown: false,
+              }}
             />
-            <Stack.Screen
-              name="habits/[id]"
-            />
-          </Stack>
+            
+            </Stack>
         </BottomSheetModalProvider>
       </GestureHandlerRootView>
       <PortalHost />

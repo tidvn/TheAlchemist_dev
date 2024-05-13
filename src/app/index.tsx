@@ -67,6 +67,13 @@ export default function HomeScreen() {
           <Button
             variant='outline'
             className='shadow shadow-foreground/5'
+            onPress={() => router.push('/main/trading')}
+          >
+            <Text>trading</Text>
+          </Button>
+          <Button
+            variant='outline'
+            className='shadow shadow-foreground/5'
             onPress={() => setColorScheme(isDarkColorScheme ? 'light' : 'dark')}
           >
             <Text>Theme</Text>

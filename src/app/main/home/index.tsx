@@ -1,9 +1,13 @@
 import { View, Text } from 'react-native';
-import CoinCard from '~/components/main/CoinCard';
+import CoinCard from '~/components/app/main/CoinCard';
 
 export default function HomeTab() {
   return (
-    <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+    <View>
+       <CoinCard/>
+       <CoinCard/>
+       <CoinCard/>
+       <CoinCard/>
        <CoinCard/>
     </View>
   );

@@ -46,13 +46,15 @@ export default function RootLayout() {
         // Adds the background color to the html element to prevent white background on overscroll.
         document.documentElement.classList.add("bg-background");
       }
+
       if (!theme) {
         setAndroidNavigationBar(colorScheme);
         AsyncStorage.setItem("theme", colorScheme);
         setIsColorSchemeLoaded(true);
         return;
       }
-      const colorTheme = theme === "dark" ? "dark" : "light";
+      // const colorTheme = theme === "dark" ? "dark" : "light";
+      const colorTheme = "light"
       setAndroidNavigationBar(colorTheme);
       if (colorTheme !== colorScheme) {
         setColorScheme(colorTheme);
@@ -79,6 +81,7 @@ export default function RootLayout() {
             <Stack>
               <Stack.Screen name="index" options={{ headerShown: false, headerRight: () => <ThemeToggle /> }} />
               <Stack.Screen name="auth" options={{ headerShown: false }} />
+              <Stack.Screen name="main" options={{ headerShown: false }} />
               <Stack.Screen name="+not-found" />
             </Stack>
           </BottomSheetModalProvider>

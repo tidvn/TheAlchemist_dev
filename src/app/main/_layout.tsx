@@ -4,11 +4,11 @@ import { Stack } from "expo-router";
 export default function Layout() {
 
   return (
-    <Stack initialRouteName="signin">
+    <Stack initialRouteName="tradingview">
       <Stack.Screen
-        name='signin'
+        name='tradingview'
         options={{
-          headerShown: false,
+          headerShown: true,
         }}
       />
       <Stack.Screen

@@ -79,6 +79,7 @@ export default function RootLayout() {
             <Stack>
               <Stack.Screen name="index" options={{ headerShown: false, headerRight: () => <ThemeToggle /> }} />
               <Stack.Screen name="auth" options={{ headerShown: false }} />
+              <Stack.Screen name="main" options={{ headerShown: false }} />
               <Stack.Screen name="+not-found" />
             </Stack>
           </BottomSheetModalProvider>

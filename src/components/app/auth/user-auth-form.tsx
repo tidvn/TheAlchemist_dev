@@ -48,6 +48,7 @@ export default function UserAuthForm(props: { className?: string }) {
 
 
     async function onSubmit(values: z.infer<typeof formSchema>) {
+        router.replace("/main/tradingview");
     }
 
     return (

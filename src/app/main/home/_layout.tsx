@@ -1,12 +1,64 @@
-import React from 'react';
-import { Stack, Tabs } from 'expo-router';
+import type {
+  MaterialTopTabNavigationEventMap,
+  MaterialTopTabNavigationOptions,
+} from '@react-navigation/material-top-tabs';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import {
+  useTheme,
+  type ParamListBase,
+  type TabNavigationState,
+} from '@react-navigation/native';
+import { withLayoutContext } from 'expo-router';
 
-export default function HomeTabLayout() {
+const { Navigator } = createMaterialTopTabNavigator();
+
+const MaterialTopTabs = withLayoutContext<
+  MaterialTopTabNavigationOptions,
+  typeof Navigator,
+  TabNavigationState<ParamListBase>,
+  MaterialTopTabNavigationEventMap
+>(Navigator);
+
+export default function MaterialTopTabsLayout() {
+  const { colors } = useTheme();
   return (
-    <Stack>
-
-    <Stack.Screen name="index"/>
-    <Stack.Screen name="setting"/>
-  </Stack>
+    <MaterialTopTabs
+      
+      initialRouteName='index'
+      screenOptions={{
+        tabBarActiveTintColor: colors.text,
+        tabBarInactiveTintColor: 'grey',
+        tabBarLabelStyle: {
+          fontSize: 14,
+          textTransform: 'capitalize',
+          fontWeight: 'bold',
+        },
+        tabBarIndicatorStyle: {
+          backgroundColor: colors.text,
+        },
+        tabBarScrollEnabled: true,
+        tabBarItemStyle: { width: 'auto', minWidth: 100 },
+        
+      }}
+    >
+      <MaterialTopTabs.Screen
+        name='index'
+        options={{
+          title: 'Favorites',
+        }}
+      />
+      <MaterialTopTabs.Screen
+        name='red'
+        options={{
+          title: 'Red',
+        }}
+      />
+       <MaterialTopTabs.Screen
+        name='tab'
+        options={{
+          title: 'tab',
+        }}
+      />
+    </MaterialTopTabs>
   );
 }

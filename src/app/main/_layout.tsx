@@ -1,6 +1,7 @@
 import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
+import FeedHeader from '~/components/common/FeedHeader';
 
 export default function TabLayout() {
     return (
@@ -10,8 +11,8 @@ export default function TabLayout() {
             <Tabs.Screen
                 name="home"
                 options={{
-                    headerShown: false,
-                    title: 'Favorites',
+                    header: (props) => <FeedHeader {...props} />,
+                    title: 'Home',
                     tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
                 }}
             />
